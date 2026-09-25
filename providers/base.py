@@ -60,7 +60,7 @@ class BaseLLMClient:
         modelos = self.models.copy()
         random.shuffle(modelos)
 
-        for model in self.models:
+        for model in modelos:
             for attempt in range(3):  # Máximo de 3 tentativas por modelo
                 try:
                     logger.debug(f"Tentando {model} (atempto {attempt+1})...")
